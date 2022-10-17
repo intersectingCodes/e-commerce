@@ -21,8 +21,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
+    <div>
+      <Navbar cardTotal={card.length} />
+      <div style={{ height: "90px" }}></div>
       <div className="container">
         <h1 className="text-center">Bizim Store</h1>
         <div className="col d-flex">
@@ -41,7 +42,7 @@ function App() {
           </div>
         </div>
         <div className="mt-5 justify-content-center g-3">
-        <h2 className="text-center display-1 text-danger">CART</h2>
+          <h2 className="text-center display-1 text-danger">CART</h2>
           <CardContainer product={false} removeCard={removeCard} card={card} />
         </div>
       </div>
