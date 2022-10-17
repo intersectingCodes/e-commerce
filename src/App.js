@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CardContainer from "./components/CardContainer";
 import Product from "./components/Product";
+import Navbar from "./components/Navbar";
 import { data as products } from "./helpers/data";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Navbar />
       <div className="container">
         <h1 className="text-center">Bizim Store</h1>
         <div className="row justify-content-center g-3">
