@@ -1,7 +1,7 @@
 import React from "react";
-import Category from "./category";
+import Category from "./Category";
 import { useState } from "react";
-import Rating from "./rating";
+import Rating from "./Rating";
 
 const Aside = (data) => {
   const { products } = data;
@@ -20,8 +20,8 @@ const Aside = (data) => {
   });
   return (
     <aside>
-      <h1>Aside</h1>
       <div className="category">
+      <h3>Category</h3>
         {categoryArray.map((item, index) => {
           return <Category category={item} key={index} />;
         })}
