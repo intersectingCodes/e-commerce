@@ -65,7 +65,7 @@ const Navbar = () => {
               <a className="nav-link disabled">Disabled</a>
             </li>
           </ul>
-          <button className="btn btn-xl btn-success nav-cart">Sepetim</button>
+          <button className="btn btn-xl btn-success nav-cart">Sepetim <span>0</span></button>
         </div>
       </div>
     </nav>
