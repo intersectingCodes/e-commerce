@@ -33,7 +33,7 @@ const Navbar = () => {
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-           <button  className='btn btn-xl btn-success nav-cart'>Sepetim<span className="badge text-bg-secondary ms-2">10</span></button>
+           <button  className='btn btn-xl btn-success nav-cart'>Sepetim<span className="badge text-bg-secondary ms-2">0</span></button>
           </div>
         </div>
       </nav>
