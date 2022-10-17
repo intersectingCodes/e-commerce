@@ -1,7 +1,7 @@
 import React from "react";
 import Category from "./category";
 import { useState } from "react";
-import Rating from "./Rating";
+import Rating from "./rating";
 
 const Aside = (data) => {
   const { products } = data;
