@@ -1,5 +1,5 @@
 import React from "react";
-import Category from "./Category";
+import Category from "./category";
 import { useState } from "react";
 import Rating from "./Rating";
 

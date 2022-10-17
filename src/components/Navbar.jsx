@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = ({ cardTotal }) => {
   return (
-    <nav className="navbar navbar-expand-lg fixed-top bg-light">
+    <nav className="navbar fixed-top navbar-expand-lg fixed-top bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="home#">
           Navbar
