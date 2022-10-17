@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cooper = () => {
   return (
-    <div>Cooper</div>
+    <h1>deneme devam</h1>
   )
 }
 
