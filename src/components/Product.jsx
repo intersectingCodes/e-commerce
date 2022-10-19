@@ -65,7 +65,7 @@ const Product = ({
         </div>
         {!product && (
           <div className="text-center">
-            <button onClick={() => removeCard(id)} style={{ width: "12rem" }}>
+            <button className="btn btn-danger text-white p-1" onClick={() => removeCard(id)} style={{ width: "12rem" }}>
               REMOVE
             </button>
           </div>
