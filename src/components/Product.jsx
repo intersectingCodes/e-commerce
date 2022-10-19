@@ -8,7 +8,7 @@ const Product = ({
   price,
   title,
   addToCart,
-  product,
+  isProduct,
   removeCard,
 }) => {
   // const { category, id, image, price, title } = props;
@@ -33,7 +33,7 @@ const Product = ({
         <div className="card-body d-flex justify-content-between">
           <span className="fw-bold">{price}$</span>
 
-          {product ? (
+          {isProduct ? (
             <i
               onClick={() => addToCart({ category, id, image, price, title })}
               className="fa-solid fa-cart-plus"
@@ -63,9 +63,13 @@ const Product = ({
             </>
           )}
         </div>
-        {!product && (
+        {!isProduct && (
           <div className="text-center">
-            <button className="btn btn-danger text-white p-1" onClick={() => removeCard(id)} style={{ width: "12rem" }}>
+            <button
+              className="btn btn-danger text-white p-1"
+              onClick={() => removeCard(id)}
+              style={{ width: "12rem" }}
+            >
               REMOVE
             </button>
           </div>
