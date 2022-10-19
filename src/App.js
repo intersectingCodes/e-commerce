@@ -3,41 +3,14 @@ import CardContainer from "./components/CardContainer";
 import Product from "./components/Product";
 import Navbar from "./components/Navbar";
 // import { data as products } from "./helpers/data";
-<<<<<<< HEAD
-import Aside from "./components/Aside/Aside";
-=======
+
 import Aside from "./components/Aside/aside";
 >>>>>>> main
 import axios from "axios";
 
 function App() {
   const [card, setCard] = useState([]);
-<<<<<<< HEAD
 
-  const [products, setProducts] = useState([])
-  // console.log(products);
-  const baseurl = "https://fakestoreapi.com/products";
-
-  const getProducts = async () => {
-    try {
-      const { data } = await axios.get(baseurl);
-      setProducts(data)
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-
-  useEffect(() => {
-    
-    getProducts();
-  
-
-  }, [])
-  
-
-=======
   const [products, setProducts] = useState([]);
   // console.log(products);
 
