@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 // import { data as products } from "./helpers/data";
 
 import Aside from "./components/Aside/aside";
->>>>>>> main
+
 import axios from "axios";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
     }
   };
 
->>>>>>> main
+
   const addToCart = (newCard) => {
     console.log("product clicked", newCard);
     setCard([...card, newCard]);
