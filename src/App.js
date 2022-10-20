@@ -9,6 +9,10 @@ import axios from "axios";
 function App() {
   const [card, setCard] = useState([]);
   const [products, setProducts] = useState([]);
+<<<<<<< HEAD
+=======
+  const [loading, setLoading] = useState(true);
+>>>>>>> ihsan
   // console.log(products);
 
   useEffect(() => {
@@ -22,6 +26,10 @@ function App() {
       const { data } = await axios.get(baseUrl);
       setProducts(data);
       console.log(data);
+<<<<<<< HEAD
+=======
+      setLoading(false);
+>>>>>>> ihsan
     } catch (err) {
       console.log(err);
     }
@@ -43,7 +51,7 @@ function App() {
       <Navbar cardTotal={card.length} />
       <div style={{ height: "90px" }}></div>
       <div className="container">
-        <h1 className="text-center">Bizim Store</h1>
+        <h1 className="text-center">{loading ? "Loading" : "Bizim Store"}</h1>
         <div className="col d-flex">
           <Aside className="row-1" products={products} />
           <div className="row justify-content-center g-3">
