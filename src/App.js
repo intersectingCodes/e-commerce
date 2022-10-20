@@ -9,10 +9,9 @@ import axios from "axios";
 function App() {
   const [card, setCard] = useState([]);
   const [products, setProducts] = useState([]);
-<<<<<<< HEAD
-=======
+
   const [loading, setLoading] = useState(true);
->>>>>>> ihsan
+
   // console.log(products);
 
   useEffect(() => {
@@ -26,10 +25,8 @@ function App() {
       const { data } = await axios.get(baseUrl);
       setProducts(data);
       console.log(data);
-<<<<<<< HEAD
-=======
+
       setLoading(false);
->>>>>>> ihsan
     } catch (err) {
       console.log(err);
     }
