@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 // import { data as products } from "./helpers/data";
 import Aside from "./components/Aside/aside";
 import axios from "axios";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   const [card, setCard] = useState([]);
@@ -40,8 +41,9 @@ function App() {
 
   return (
     <div>
-      <Navbar cardTotal={card.length} />
-      <div style={{ height: "90px" }}></div>
+      {/* <Navbar cardTotal={card.length} /> */}
+
+      <AppRouter />
       <div className="container">
         <h1 className="text-center">Bizim Store</h1>
         <div className="col d-flex">

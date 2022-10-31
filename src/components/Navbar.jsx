@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ cardTotal }) => {
   return (
     <nav className="navbar fixed-top navbar-expand-lg fixed-top bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="home#">
+        <Link className="navbar-brand" to="/">
           Navbar
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
