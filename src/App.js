@@ -10,6 +10,9 @@ import AppRouter from "./router/AppRouter";
 function App() {
   const [card, setCard] = useState([]);
   const [products, setProducts] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
   // console.log(products);
 
   useEffect(() => {
@@ -23,6 +26,8 @@ function App() {
       const { data } = await axios.get(baseUrl);
       setProducts(data);
       console.log(data);
+
+      setLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -45,7 +50,7 @@ function App() {
 
       <AppRouter />
       <div className="container">
-        <h1 className="text-center">Bizim Store</h1>
+        <h1 className="text-center">{loading ? "Loading" : "Bizim Store"}</h1>
         <div className="col d-flex">
           <Aside className="row-1" products={products} />
           <div className="row justify-content-center g-3">
