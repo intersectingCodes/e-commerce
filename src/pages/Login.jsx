@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 
-const Login = ({ setUser }) => {
+const Login = () => {
   const [input, setInput] = useState({ email: "", password: "" });
+  const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const handleChange = (e) =>
     setInput({ ...input, [e.target.id]: e.target.value });

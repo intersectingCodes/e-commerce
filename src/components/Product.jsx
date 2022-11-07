@@ -1,20 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+import { CartContext } from "../context/CartContext";
 
-const Product = ({
-  category,
-  id,
-  image,
-  price,
-  title,
-  addToCart,
-  isProduct,
-  removeCard,
-}) => {
+const Product = ({ category, id, image, price, title, isProduct }) => {
   // const { category, id, image, price, title } = props;
   const [number, setNumber] = useState(0);
   // const [removeCard, setRemoveCard] = useState(true);
-
+  const { addToCart, removeCard } = useContext(CartContext);
   return (
     <div className="col">
       <div className="card m-auto" style={{ width: "18rem" }}>

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
-const Navbar = ({ cardTotal }) => {
+const Navbar = () => {
   const navigate = useNavigate();
+  const { card } = useContext(CartContext);
+  // console.log(context);
   return (
     <nav className="navbar fixed-top navbar-expand-lg fixed-top bg-light">
       <div className="container-fluid">
@@ -69,7 +72,7 @@ const Navbar = ({ cardTotal }) => {
             className="btn btn-xl btn-success nav-cart"
           >
             Sepetim
-            <span className="badge text-bg-danger ms-2">{cardTotal}</span>
+            <span className="badge text-bg-danger ms-2">{card.length}</span>
           </button>
         </div>
       </div>
