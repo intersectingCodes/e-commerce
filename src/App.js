@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
-import CardContainer from "./components/CardContainer";
-import Product from "./components/Product";
-import Navbar from "./components/Navbar";
 // import { data as products } from "./helpers/data";
 
+<<<<<<< HEAD
 import Aside from "./components/Aside/aside";
 
 import axios from "axios";
@@ -42,32 +39,14 @@ function App() {
     setCard(filteredCard);
   };
 
+=======
+import AppRouter from "./router/AppRouter";
+
+function App() {
+>>>>>>> 29af806d3b2898fa77e788ddf6abc3c5d273d75f
   return (
     <div>
-      <Navbar cardTotal={card.length} />
-      <div style={{ height: "90px" }}></div>
-      <div className="container">
-        <h1 className="text-center">Bizim Store</h1>
-        <div className="col d-flex">
-          <Aside className="row-1" products={products} />
-          <div className="row justify-content-center g-3">
-            {products?.map((product) => {
-              return (
-                <Product
-                  addToCart={addToCart}
-                  key={product.id}
-                  {...product}
-                  isProduct={true}
-                />
-              );
-            })}
-          </div>
-        </div>
-        <div className="mt-5 justify-content-center g-3">
-          <h2 className="text-center display-1 text-danger">CART</h2>
-          <CardContainer removeCard={removeCard} card={card} />
-        </div>
-      </div>
+      <AppRouter />
     </div>
   );
 }

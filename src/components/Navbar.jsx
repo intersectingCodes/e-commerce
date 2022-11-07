@@ -1,12 +1,14 @@
 import React from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = ({ cardTotal }) => {
+  const navigate = useNavigate();
   return (
     <nav className="navbar fixed-top navbar-expand-lg fixed-top bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="home#">
+        <Link className="navbar-brand" to="/">
           Navbar
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,11 +25,6 @@ const Navbar = ({ cardTotal }) => {
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="home#">
                 Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="home#">
-                Link
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -62,12 +59,15 @@ const Navbar = ({ cardTotal }) => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="home#">
-                Disabled
-              </a>
+              <NavLink className="nav-link" to="/login">
+                Login
+              </NavLink>
             </li>
           </ul>
-          <button className="btn btn-xl btn-success nav-cart">
+          <button
+            onClick={() => navigate("/cart")}
+            className="btn btn-xl btn-success nav-cart"
+          >
             Sepetim
             <span className="badge text-bg-danger ms-2">{cardTotal}</span>
           </button>
